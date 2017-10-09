@@ -30,7 +30,7 @@ document.querySelector('#submit').addEventListener("click", function(event) {
             media_invoice = (((media_cost*tech_fee)+data_fee)* service_fee).toFixed(2)
             document.getElementById("calculation").innerText = "Invoice Amount = (("+media_cost+" * "+tech_fee+"%) + "+data_fee+") * "+service_fee+"% = "+media_invoice
             min_con = (media_invoice-(media_cost+data_fee)).toFixed(2)
-            document.getElementById("min_contribution").innerText = "Minimum Contribution = "+media_invoice+" - ("+media_cost+"+"+data_fee+") = "+min_con
+            document.getElementById("min_contribution").innerText = "Contribution Towards Minimum = "+media_invoice+" - ("+media_cost+"+"+data_fee+") = "+min_con
         }
     catch(err) {
         document.getElementById("result").innerText = "Make sure you have entered the correct amounts as numbers";
