@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+  </head>
+  <body>
+      <div id="container-fluid" class="modal-dialog">
+        <div class="card-content">
+            <div class="card-header">
+                <h2 class="modal-title text-center">DBM Starter Pack</h2>
+            </div>
+            <div>
+                <h5 class = 'text-left'>Formula: Invoice Amount = ((Media Cost * (1+Tech Fee) + Data Fee)) * (1+Service Fee)</h5 >
+                <h5 class = 'text-left'>Minimum Contribution = Invoice Amount - (Media Cost + Data Fee)</h5 >
+            </div>
+            <div class="card-body pr-2">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="well">
+                            <form id="loginForm" novalidate="novalidate">
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Media Cost ($)</label>
+                                    <input type="text" class="form-control" id="media" name="media_service_fee" title="Enter the media service fee" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Data Fee ($)</label>
+                                    <input type="text" class="form-control" id="data" name="username" title="Enter the service fee" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Tech Fee (%)</label>
+                                    <input type="text" class="form-control" id="tech" name="media_service_fee" title="Enter the media service fee" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="text" class="control-label">Service Fees (%)</label>
+                                    <input type="text" class="form-control" id="service" name="service_fee" title="Enter the media service fee" required>
+                                </div>
+                                <button type="submit" id="submit" class="btn btn-success btn-block">Calculate Charge</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-7 well mr-2">
+                      <div class="card" style="width: 20rem;">
+                        <div class="card-block">
+                          <div><h4 class="card-title card-header">Calculation</h4></div>
+                          <div id='result'></div>
+                          <div id='calculation'></div>
+                          <div id="min_contribution"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/javascript/calculation.js"> </script>
+  </body>
+</html>
