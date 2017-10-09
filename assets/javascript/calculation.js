@@ -33,7 +33,7 @@ document.querySelector('#submit').addEventListener("click", function(event) {
             document.getElementById("min_contribution").innerText = "Contribution Towards Minimum = "+media_invoice+" - ("+media_cost+"+"+data_fee+") = "+min_con
         }
     catch(err) {
-        document.getElementById("result").innerText = "Make sure you have entered the correct amounts as numbers";
+        document.getElementById("calculation").innerText = "Make sure you have entered the correct amounts as numbers";
         }
     event.preventDefault();
 }, false);
